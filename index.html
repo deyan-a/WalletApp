@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="pop-up-div">
         <div class="pop-up-form"> Spooky Hidden Form Goes Here</div>
     </div>
@@ -19,6 +20,56 @@
                 <label for="">Income</label>
                 <label id="incomeLabel" for="">220.00lv</label>
             </div>
+=======
+    <!-- Input data form for Income/Expenses -->
+    <div id="form">
+        <div class="tab-panel">
+            <button rel ="income-form" clas="">Income</button>
+            <button rel ="expense-form" class="active">Expense</button>
+        </div>
+        <!-- tab content for Income and Expenses-->
+        <div id="income-form" class="form">
+            <form>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" placeholder="Amount" step="0.01" min="0" />
+                <label for="date">Date</label>
+                <input type="date" name="date" />
+                <label>Category</label>
+                <select name="income">
+                    <option value="salary">Salary</option>
+                    <option value="sale">Sale</option>
+                    <option value="rent">Rent</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>Note</label>
+                <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
+                <input type="button" value="Add" />
+            </form>
+        </div>
+
+        <div id="expense-form" class="form active">
+            <form>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" placeholder="0.00" step="0.01" min="0" />
+                <label for="date">Date</label>
+                <input type="date" name="date" />
+                <label>Category</label>
+                <select name="expense">
+                    <option value="salary">Bills</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="vehicle">Vehicle</option>
+                    <option value="transport">Transport</option>
+                    <option value="healthCare">Health Care</option>
+                    <option value="pets">Pets</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>Note</label>
+                <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
+                <input type="button" value="Add" />
+            </form>
+        </div>
+    </div>
+>>>>>>> 9acb5713c6775681e51ee0fd4e7498e3bc3c77e0
 
             <div class="label-pairs">
                 <label for="">Expenses</label>
