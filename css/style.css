@@ -1,1 +1,84 @@
 @import url(http://reset5.googlecode.com/hg/reset.min.css);
+.pop-up-div {
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    background: rgba(77, 77, 245, 0.2);
+}
+.pop-up-form {
+    display: none;
+    height: 25em;
+    width: 25em;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    background: white;
+}
+.home-layout {
+    /* margin-top: 5%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.home-labels {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+    width: 30rem;
+}
+.label-pairs {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#home-graph {
+    border: 1px solid black;
+    height: 20rem;
+    width: 20rem;
+}
+#btn-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border-style: none;
+    align-content: center;
+    position: relative;
+    z-index: 4;
+}
+.lastFiveEvents {
+    width: 20rem;
+    height: 8rem;
+    text-align: center;
+}
+.list-last-five-events {
+    text-align: left;
+}
+.passive {
+    background: rgb(168, 168, 168);
+}
+/* .not-clicked {
+transform: rotate(0deg);
+animation: spin 0.2s reverse;
+} */
+.clicked {
+    background: rgb(165, 216, 250);
+    transform: rotate(135deg);
+    animation: spin 0.2s  normal;
+}
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg);
+        background-color: rgb(168, 168, 168);
+     }
+    100% { 
+        transform: rotate(135deg);
+        background-color: rgb(165, 216, 250);
+    }
+}
