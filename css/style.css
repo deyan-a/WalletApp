@@ -8,8 +8,8 @@ body {
 
 .navigation {
   font-size: 2em;
-  background-color: #292778;
   height: 33em;
+  background-color: #292778;
 }
 
 .mainmenu, .submenu {
@@ -75,7 +75,7 @@ body {
     left: 0;
     position: absolute;
     z-index: 2;
-    background: rgba(10, 10, 70, 0.5);
+    background: rgba(0, 0, 0, 0.75);
 }
 .pop-up-form {
     display: none;
@@ -87,55 +87,37 @@ body {
     z-index: 2;
     background: white;
 }
-.home-layout {
-    /* margin-top: 5%; */
-    /* display: flex; */
-   /* margin-left: auto; */
-    /* flex-direction: column;     */
-}
 
 .home-labels {
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* flex-grow: 0; */
     width: 100%;
     margin-top: 0.5em;
-}
-.label-pairs {
-    /* display: flex; */
-    /* flex-direction: column; */
-    
 }
 
 .home-labels, .last-5-label {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     color: rgb(175, 186, 189);
-   
-    font-size: 11px;
+    font-size: 1.25em;
     font-weight: 250;
 }
-#incomeLabel, #expensesLabel, #balanceLabel, .list-last-five-events {
-    color: rgb(212, 209, 209);
-    font-size: 18px;
-    font-weight: 250;
-}
+
 #balanceLabel {
-    font-size: 18px;
+    font-size: 1.25em;
     color:rgb(218, 252, 252);
   
 }
 #expensesLabel {
-    font-size: 18px;
+    font-size: 1.25em;
     color:rgb(252, 226, 218);
 }
 #incomeLabel {
+    font-size: 1.25em;
     color:rgb(176, 252, 182);
 }
+
 .list-last-five-events {
     list-style-type: none;
-    font-size: 17px;
-    margin-top: 0rem;
+    font-size: 1.25em;
 }
 
 ul {
@@ -154,9 +136,9 @@ ul > li:nth-of-type(odd) {
     margin-top: 0.5em;
 }
 #btn-img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 2rem;
+    width: 3em;
+    height: 3em;
+    border-radius: 2em;
     border-style: none;
     align-content: center;
     position: relative;
@@ -175,10 +157,7 @@ ul > li:nth-of-type(odd) {
 .passive {
     background: rgb(168, 168, 168);
 }
-/* .not-clicked {
-transform: rotate(0deg);
-animation: spin 0.2s reverse;
-} */
+
 .clicked {
     background: rgb(165, 216, 250);
     transform: rotate(135deg);
@@ -197,7 +176,7 @@ animation: spin 0.2s reverse;
 
 .form {
     display: none;
-    width: 500px;
+    width: 35%;
     padding: 20px;
     background: #ffffff;
     margin: auto;
@@ -212,7 +191,7 @@ animation: spin 0.2s reverse;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     color: rgb(24, 226, 189);
-    font-size: 18px;
+    font-size: 1.25em;
     font-weight: 250;
     padding: 20px;
     margin: -30px -30px 30px -30px;
@@ -241,7 +220,7 @@ animation: spin 0.2s reverse;
     background: transparent;
     margin-bottom: 10px;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 13px;
+    font-size: 1.25em;
     height: 35px;
 }
 
@@ -262,7 +241,7 @@ animation: spin 0.2s reverse;
     color: #292787;
     font-weight: bold;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
+    font-size: 1.25em;
     padding: 6px 18px;
     text-decoration: none;
     text-transform: uppercase;
@@ -276,13 +255,10 @@ animation: spin 0.2s reverse;
 }
 
 .tab-panel {
-    width: 540px;
+    width: 35%;
     margin: auto;
     margin-top: 50px;
     background: #1f1e70;
-    /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); */
 }
 
 .tab-panel button {
@@ -290,8 +266,7 @@ animation: spin 0.2s reverse;
     color: rgb(24, 226, 189);
     text-transform: uppercase;
     text-align: center;
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25em;
     font-weight: bold;
     float: center;
     border: #1f1e70;
@@ -299,7 +274,7 @@ animation: spin 0.2s reverse;
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 49%;
+    width: 49.5%;
     border-radius: 20px;
 }
 
@@ -320,7 +295,6 @@ animation: spin 0.2s reverse;
 .form.active {
     display: block;
 }
-
 
 .footer-container {
   position: fixed;
