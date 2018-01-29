@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(function () {
     var $addBtn = $("#btn-img");
     var $popUpDiv = $(".pop-up-div");
@@ -9,8 +8,7 @@ $(function () {
         $popUpForm.fadeToggle(300);
     });
 
-=======
-$(function() {
+// $(function() {
     $('.tab-panel button').on('click', function () {
         var panel = $(this).closest('.tab-panel');
 
@@ -27,5 +25,4 @@ $(function() {
 
         $('.form.active').slideUp(300, showNextForm);
     })
->>>>>>> 9acb5713c6775681e51ee0fd4e7498e3bc3c77e0
 });

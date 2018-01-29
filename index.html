@@ -2,138 +2,173 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>eBudget</title>
 </head>
 
 <body>
-<<<<<<< HEAD
-    <div class="pop-up-div">
-        <div class="pop-up-form"> Spooky Hidden Form Goes Here</div>
-    </div>
-    <div class="home-layout">
-        <div class="home-labels">
-            <div class="label-pairs">
-                <label for="">Income</label>
-                <label id="incomeLabel" for="">220.00lv</label>
-            </div>
-=======
-    <!-- Input data form for Income/Expenses -->
-    <div id="form">
-        <div class="tab-panel">
-            <button rel ="income-form" clas="">Income</button>
-            <button rel ="expense-form" class="active">Expense</button>
-        </div>
-        <!-- tab content for Income and Expenses-->
-        <div id="income-form" class="form">
-            <form>
-                <label for="amount">Amount</label>
-                <input type="number" name="amount" placeholder="Amount" step="0.01" min="0" />
-                <label for="date">Date</label>
-                <input type="date" name="date" />
-                <label>Category</label>
-                <select name="income">
-                    <option value="salary">Salary</option>
-                    <option value="sale">Sale</option>
-                    <option value="rent">Rent</option>
-                    <option value="other">Other</option>
-                </select>
-                <label>Note</label>
-                <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
-                <input type="button" value="Add" />
-            </form>
-        </div>
+        <div class="pop-up-div">
+                <div id="form">
+                    <div class="tab-panel">
+                        <button rel="income-form" clas="">Income</button>
+                        <button rel="expense-form" class="active">Expense</button>
+                    </div>
+                    <!-- tab content for Income and Expenses-->
+                    <div id="income-form" class="form">
+                        <form>
+                            <label for="amount">Amount</label>
+                            <input type="number" name="amount" placeholder="Amount" step="0.01" min="0" />
+                            <label for="date">Date</label>
+                            <input type="date" name="date" />
+                            <label>Category</label>
+                            <select name="income">
+                                <option value="salary">Salary</option>
+                                <option value="sale">Sale</option>
+                                <option value="rent">Rent</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label>Note</label>
+                            <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
+                            <input type="button" value="Add" />
+                        </form>
+                    </div>
 
-<<<<<<< HEAD
-        <div id="expense-form" class="form active">
-            <form>
-                <label for="amount">Amount</label>
-                <input type="number" name="amount" placeholder="0.00" step="0.01" min="0" />
-                <label for="date">Date</label>
-                <input type="date" name="date" />
-                <label>Category</label>
-                <select name="expense">
-                    <option value="salary">Bills</option>
-                    <option value="shopping">Shopping</option>
-                    <option value="vehicle">Vehicle</option>
-                    <option value="transport">Transport</option>
-                    <option value="healthCare">Health Care</option>
-                    <option value="pets">Pets</option>
-                    <option value="other">Other</option>
-                </select>
-                <label>Note</label>
-                <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
-                <input type="button" value="Add" />
-            </form>
-        </div>
-    </div>
->>>>>>> 9acb5713c6775681e51ee0fd4e7498e3bc3c77e0
-
-            <div class="label-pairs">
-                <label for="">Expenses</label>
-                <label id="expensesLabel" for="">20.00lv</label>
+                    <div id="expense-form" class="form active">
+                        <form>
+                            <label for="amount">Amount</label>
+                            <input type="number" name="amount" placeholder="0.00" step="0.01" min="0" />
+                            <label for="date">Date</label>
+                            <input type="date" name="date" />
+                            <label>Category</label>
+                            <select name="expense">
+                                <option value="salary">Bills</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="vehicle">Vehicle</option>
+                                <option value="transport">Transport</option>
+                                <option value="healthCare">Health Care</option>
+                                <option value="pets">Pets</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label>Note</label>
+                            <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
+                            <input type="button" value="Add" />
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="label-pairs">
-                <label for="">Balance</label>
-                <label id="balanceLabel" for="">200.00lv</label>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header col-md-12">
+                <div class="profile-icon">
+                    <a>
+                        <i class="fa fa-user-circle" style="font-size: 30px"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
-
-        <div id="home-graph">graph</div>
-        <div class="lastFiveEvents">
-            <label for="">Last 5 Transaction</label>
-            <div class="list-last-five-events">
-            <span>Income</span><span>Salary</span><span>220.00 lv</span><br>
-            <span>Expense</span><span>Groceries</span>30.00 lv</span><br>         <span>Expense</span><span>Health</span>15.00 lv</span>
-            <span>Expense</span><span>Home</span>15.00 lv</span><br>
-            <span>Expense</span><span>Pets</span>40.00 lv</span><br>
-        </div>
-        </div>
-        <div>
-            <img id="btn-img" class="passive" src="img/btn-plus.png" />
-        </div>
-
-
-    </div>
-=======
-    <div class="header">
-        <div class="profile-icon">
-            <a><i class="fa fa-user-circle" style="font-size: 30px"></i></a>
-        </div>
-    </div>
-
-        <div class="navigation">
-            <ul class="mainmenu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Reporting</a>
-                <ul class="submenu">
-                    <li><a href="">Balance</a></li>
-                    <li><a href="">By Category</a></li>
+        <div class="row">
+            <div class="navigation col-md-2">
+                <ul class="mainmenu">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Reporting</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="">Balance</a>
+                            </li>
+                            <li>
+                                <a href="">By Category</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Budget Planner</a>
+                    </li>
+                    <li>
+                        <a href="">Contact us</a>
+                    </li>
                 </ul>
-            </li>
-            <li><a href="">Budget Planner</a></li>
-            <li><a href="">Contact us</a></li>
-            </ul>
+            </div>
+            <div class="col-md-10">
+                
+                <div class="home-layout">
+                    <div class="row">
+                        <div class="home-labels">
+                            <div class="label-pairs col-md-4">
+                                <label for="">Income</label>
+                                <br>
+                                <label id="incomeLabel" for="">220.00lv</label>
+                            </div>
+                            <!-- Input data form for Income/Expenses -->
+
+
+                            <div class="label-pairs col-md-4">
+                                <label for="">Expenses</label>
+                                <br>
+                                <label id="expensesLabel" for="">20.00lv</label>
+                            </div>
+                            <div class="label-pairs col-md-4">
+                                <label for="">Balance</label>
+                                <br>
+                                <label id="balanceLabel" for="">200.00lv</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div id="home-graph">graph</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="last-5-label">
+                            <div class="list-last-five-events">
+                                <ul>
+                                    <li>Income Salary 200.00lv</li>
+                                    <li>Income Salary 200.00lv</li>
+                                    <li>Income Salary 200.00lv</li>
+                                    <li>Income Salary 200.00lv</li>
+                                    <li>Income Salary 200.00lv</li>
+                            </ul> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <img id="btn-img" class="passive" src="img/btn-plus.png" />
+                    </div>
+
+
+                </div>
+            </div>
         </div>
 
-        <div class="footer-container">
-            <div class="footer">
-            <a>Feedback</a>
-            <a>Terms &amp; Conditions</a>
-            <a>About us</a>
-            <a>Copyright <i class="fa fa-copyright"></i> 2018 eBudget </a>
+        <div class="row">
+            <div class="footer-container col-md-12">
+                <div class="footer">
+                    <a>Feedback</a>
+                    <a>Terms &amp; Conditions</a>
+                    <a>About us</a>
+                    <a>Copyright
+                        <i class="fa fa-copyright"></i> 2018 eBudget </a>
+                </div>
+            </div>
         </div>
-        </div> 
+    </div>
 
->>>>>>> working-copy-branch
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="./scripts/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
