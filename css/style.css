@@ -8,8 +8,9 @@ body {
 
 .navigation {
   font-size: 2em;
-  height: 33em;
+  height: 36em;
   background-color: #292778;
+  overflow: hidden;
 }
 
 .mainmenu, .submenu {
@@ -49,7 +50,7 @@ body {
 .header {
   color: #fffff0;
   font-size: 1.25em;
-  background-color: #292778;
+  /* background-color: #292778; */
 }
 
 .header a {
@@ -86,6 +87,11 @@ body {
     margin-right: auto;
     z-index: 2;
     background: white;
+}
+
+.home-layout {
+    float: none;
+    margin: 0 auto;
 }
 
 .home-labels {
