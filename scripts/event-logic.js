@@ -4,8 +4,8 @@ $(function () {
     // expenses
    
 
-    var $incomeTab = $("#income");
-    var $expenseTab = $("#expense");
+    var $incomeTab = $("#income-tab");
+    var $expenseTab = $("#expense-tab");
 
     $incomeTab.on("click", function () {
 
@@ -15,6 +15,8 @@ $(function () {
             var $incomeDate = $("#income-date").val();
             var $incomeSelect = $("#income-cat-selector").val();
             var $incomeNote = $("#income-note").val();
+
+            incomeModule.addIncome($incomeSelect, $incomeAmount);
 
             historyModule.addEvent("income",
             $incomeAmount, $incomeSelect, $incomeNote, $incomeDate);
@@ -31,6 +33,8 @@ $(function () {
             var $expenseDate = $("#expense-date").val();
             var $expenseSelect = $("#expense-cat-selector").val();
             var $expenseNote = $("#expense-note").val();
+
+            expensesModule.addExpense($expenseSelect, $expenseAmount);
 
             historyModule.addEvent("expense",
             $expenseAmount, $expenseSelect, $expenseNote, $expenseDate);

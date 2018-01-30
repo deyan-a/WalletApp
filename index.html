@@ -115,38 +115,38 @@
     <div class="pop-up-div">
         <div id="form">
             <div class="tab-panel">
-                <button rel="income-form" clas="">Income</button>
-                <button rel="expense-form" class="active">Expense</button>
+                <button id="income-tab" rel="income-form" class="">Income</button>
+                <button id="expense-tab" rel="expense-form" class="active">Expense</button>
             </div>
             <!-- tab content for Income and Expenses-->
             <div id="income-form" class="form">
                 <form>
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" placeholder="Amount" step="0.01" min="0" />
+                    <input id="income-amount" type="number" name="amount" placeholder="Amount" step="0.01" min="0" />
                     <label for="date">Date</label>
-                    <input type="date" name="date" />
+                    <input id="income-date" type="date" name="date" />
                     <label>Category</label>
-                    <select name="income">
+                    <select id="income-cat-selector" name="income">
                         <option value="salary">Salary</option>
                         <option value="sale">Sale</option>
                         <option value="rent">Rent</option>
                         <option value="other">Other</option>
                     </select>
                     <label>Note</label>
-                    <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
-                    <input type="button" value="Add" />
+                    <textarea id="income-note" placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
+                    <input id="income-btn-add" type="button" value="Add" />
                 </form>
             </div>
 
             <div id="expense-form" class="form active">
                 <form>
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" placeholder="0.00" step="0.01" min="0" />
+                    <input id="expense-amount" type="number" name="amount" placeholder="0.00" step="0.01" min="0" />
                     <label for="date">Date</label>
-                    <input type="date" name="date" />
+                    <input id="expense-date" type="date" name="date" />
                     <label>Category</label>
-                    <select name="expense">
-                        <option value="salary">Bills</option>
+                    <select id="expense-cat-selector" name="expense">
+                        <option value="bills">Bills</option>
                         <option value="shopping">Shopping</option>
                         <option value="vehicle">Vehicle</option>
                         <option value="transport">Transport</option>
@@ -155,8 +155,8 @@
                         <option value="other">Other</option>
                     </select>
                     <label>Note</label>
-                    <textarea placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
-                    <input type="button" value="Add" />
+                    <textarea id="expense-note" placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
+                    <input id="expense-btn-add" type="button" value="Add" />
                 </form>
             </div>
         </div>
@@ -166,6 +166,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/database.js"></script>
+    <script src="./scripts/event-logic.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 </body>

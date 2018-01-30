@@ -11,17 +11,17 @@ let incomeModule = (function () {
 
     let addIncome = function (str, val) {
         if (str === 'salary') {
-            categories.salary += val;
-            categories.total += val;
+            categories.salary += (+val);
+            categories.total += (+val);
         } else if (str === 'sale') {
-            categories.sale += val;
-            categories.total += val;
+            categories.sale += (+val);
+            categories.total += (+val);
         } else if (str === 'rent') {
-            categories.rent += val;
-            categories.total += val;
+            categories.rent += (+val);
+            categories.total += (+val);
         } else if (str === 'other') {
-            categories.other += val;
-            categories.total += val;
+            categories.other += (+val);
+            categories.total += (+val);
         }
     }
 
@@ -63,26 +63,26 @@ let expensesModule = (function () {
 
     let addExpense = function (str, val) {
         if (str === 'bills') {
-            expenses.bills += val;
-            expenses.total += val;
+            expenses.bills += (+val);
+            expenses.total += (+val);
         } else if (str === 'shopping') {
-            expenses.shopping += val;
-            expenses.total += val;
+            expenses.shopping += (+val);
+            expenses.total += (+val);
         } else if (str === 'vehicle') {
-            expenses.vehicle += val;
-            expenses.total += val;
+            expenses.vehicle += (+val);
+            expenses.total += (+val);
         } else if (str === 'transport') {
-            expenses.transport += val;
-            expenses.total += val;
+            expenses.transport += (+val);
+            expenses.total += (+val);
         } else if (str === 'healthCare') {
-            expenses.healthCare += val;
-            expenses.total += val;
+            expenses.healthCare += (+val);
+            expenses.total += (+val);
         } else if (str === 'pets') {
-            expenses.pets += val;
-            expenses.total += val;
+            expenses.pets += (+val);
+            expenses.total += (+val);
         } else if (str === 'other') {
-            expenses.other += val;
-            expenses.total += val;
+            expenses.other += (+val);
+            expenses.total += (+val);
         }
     };
 
@@ -96,7 +96,7 @@ let expensesModule = (function () {
         } else if (str === 'transport') {
             return expenses.transport;
         } else if (str === 'healthCare') {
-            return expenses.healthCare += val;
+            return expenses.healthCare;
         } else if (str === 'pets') {
             return expenses.pets;
         } else if (str === 'other') {
