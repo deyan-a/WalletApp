@@ -3,6 +3,19 @@
 $(function () {
     // expenses
    
+    var updateTotals = function  () {
+        var $incomeLabel = $("#incomeLabel");
+        var incomeTotal = incomeModule.getTotal();
+        $incomeLabel.text(incomeTotal || 0);
+    
+        var $expenseLabel = $("#expensesLabel");
+        var expenseTotal = expensesModule.getTotal();
+        $expenseLabel.text(expenseTotal || 0);
+    
+        var $balanceLabel = $("#balanceLabel");
+        var balanceTotal = calculateBalance(incomeModule, expensesModule).toFixed(2);
+        $balanceLabel.text(balanceTotal);
+    }
 
     var $incomeTab = $("#income-tab");
     var $expenseTab = $("#expense-tab");
@@ -21,7 +34,7 @@ $(function () {
             historyModule.addEvent("income",
             $incomeAmount, $incomeSelect, $incomeNote, $incomeDate);
 
-
+            updateTotals();
         });
 
     });
@@ -38,7 +51,8 @@ $(function () {
 
             historyModule.addEvent("expense",
             $expenseAmount, $expenseSelect, $expenseNote, $expenseDate);
-          
+
+            updateTotals();
         });
 
     });

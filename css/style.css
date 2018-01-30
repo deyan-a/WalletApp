@@ -161,22 +161,25 @@ ul > li:nth-of-type(odd) {
     margin-top: 0.5em;
 }
 .passive {
-    background: rgb(168, 168, 168);
+    background: #10edc5;
 }
 
 .clicked {
-    background: rgb(165, 216, 250);
+    background: #10edc5;
     transform: rotate(135deg);
     animation: spin 0.2s  normal;
+}
+.clicked:hover {
+    background: #ed1946;
 }
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
-        background-color: rgb(168, 168, 168);
+        /* background-color: #10edc5; */
      }
     100% { 
         transform: rotate(135deg);
-        background-color: rgb(165, 216, 250);
+        /* background-color: #a5d8fa; */
     }
 }
 
