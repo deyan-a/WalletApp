@@ -124,8 +124,10 @@ body {
 .list-last-five-events {
     list-style-type: none;
     font-size: 1.25em;
+    max-height: 7em;
+    overflow: hidden;
 }
-
+ 
 ul {
     list-style: none;
     padding: 0;
@@ -152,8 +154,21 @@ ul > li:nth-of-type(odd) {
 }
 .list-last-five-events {
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 0.5em;
+}
+
+.comment {
+    overflow: hidden;
+    height: 1em;
+}
+
+.income-color {
+    color: green;
+}
+
+.expense-color {
+    color: red;
 }
 
 .button-container {

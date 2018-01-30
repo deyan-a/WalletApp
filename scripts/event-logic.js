@@ -5,11 +5,11 @@ $(function () {
    
     var updateTotals = function  () {
         var $incomeLabel = $("#incomeLabel");
-        var incomeTotal = incomeModule.getTotal();
+        var incomeTotal = incomeModule.getTotal().toFixed(2);
         $incomeLabel.text(incomeTotal || 0);
     
         var $expenseLabel = $("#expensesLabel");
-        var expenseTotal = expensesModule.getTotal();
+        var expenseTotal = expensesModule.getTotal().toFixed(2);
         $expenseLabel.text(expenseTotal || 0);
     
         var $balanceLabel = $("#balanceLabel");
@@ -17,8 +17,29 @@ $(function () {
         $balanceLabel.text(balanceTotal);
     }
 
+    var updateList = function (parent, date, category, amount, note, type) {
+
+        var $newDate = $("<div>").text(date).addClass("col-xs-3");
+        var $newCategory =$("<div>").text(category).addClass("col-xs-3");
+        var $newAmount = $("<div>").text(amount).addClass("col-xs-3");
+
+        if (type === "income") {
+            $newAmount.addClass("income-color");
+        } else {
+            $newAmount.addClass("expense-color");
+        }
+
+        var $newNote = $("<div>").text(note).addClass("col-xs-3");
+        var $newList = $("<li>");
+        // <li class="row"><div class="col-xs-3">21.10.2017</div> <div class="col-xs-3">pets</div> <div class="col-xs-3">20</div> <div class="col-xs-3 comment">kupih hrana za kucheto</div> </li>                          
+        $newList.addClass("row");
+        $newList.append($newDate, $newCategory, $newAmount, $newNote);
+        $newList.prependTo(parent);        
+    }
+
     var $incomeTab = $("#income-tab");
     var $expenseTab = $("#expense-tab");
+    var $eventsList = $("#events-list")
 
     $incomeTab.on("click", function () {
 
@@ -28,12 +49,13 @@ $(function () {
             var $incomeDate = $("#income-date").val();
             var $incomeSelect = $("#income-cat-selector").val();
             var $incomeNote = $("#income-note").val();
+            var type = "income";
 
             incomeModule.addIncome($incomeSelect, $incomeAmount);
 
             historyModule.addEvent("income",
             $incomeAmount, $incomeSelect, $incomeNote, $incomeDate);
-
+            updateList($eventsList, $incomeDate, $incomeSelect, $incomeAmount, $incomeNote, type);
             updateTotals();
         });
 
@@ -46,12 +68,13 @@ $(function () {
             var $expenseDate = $("#expense-date").val();
             var $expenseSelect = $("#expense-cat-selector").val();
             var $expenseNote = $("#expense-note").val();
+            var type = "expense";
 
             expensesModule.addExpense($expenseSelect, $expenseAmount);
 
             historyModule.addEvent("expense",
             $expenseAmount, $expenseSelect, $expenseNote, $expenseDate);
-
+            updateList($eventsList, $expenseDate, $expenseSelect, $expenseAmount, $expenseNote, type);
             updateTotals();
         });
 

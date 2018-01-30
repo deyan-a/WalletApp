@@ -12,4 +12,5 @@ $(function() {
         var balanceTotal = calculateBalance(incomeModule, expensesModule);
         $balanceLabel.text(balanceTotal);
     }
+
 });
