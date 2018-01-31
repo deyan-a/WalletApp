@@ -1,8 +1,6 @@
 /* eslint-disable */
 
 $(function () {
-    // expenses
-   
     var updateTotals = function  () {
         var $incomeLabel = $("#incomeLabel");
         var incomeTotal = incomeModule.getTotal().toFixed(2);
@@ -31,7 +29,6 @@ $(function () {
 
         var $newNote = $("<div>").text(note).addClass("col-xs-3");
         var $newList = $("<li>");
-        // <li class="row"><div class="col-xs-3">21.10.2017</div> <div class="col-xs-3">pets</div> <div class="col-xs-3">20</div> <div class="col-xs-3 comment">kupih hrana za kucheto</div> </li>                          
         $newList.addClass("row");
         $newList.append($newDate, $newCategory, $newAmount, $newNote);
         $newList.prependTo(parent);        
@@ -40,8 +37,6 @@ $(function () {
     var $incomeTab = $("#income-tab");
     var $expenseTab = $("#expense-tab");
     var $eventsList = $("#events-list")
-
-    $incomeTab.on("click", function () {
 
         var spendBtn = $("#income-btn-add");
         spendBtn.on("click", function () {
@@ -59,9 +54,6 @@ $(function () {
             updateTotals();
         });
 
-    });
-    $expenseTab.on("click", function () {
-
         var spendBtn = $("#expense-btn-add");
         spendBtn.on("click", function () {
             var $expenseAmount = $("#expense-amount").val();
@@ -77,7 +69,4 @@ $(function () {
             updateList($eventsList, $expenseDate, $expenseSelect, $expenseAmount, $expenseNote, type);
             updateTotals();
         });
-
-    });
-
 });
