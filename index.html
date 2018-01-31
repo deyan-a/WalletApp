@@ -26,10 +26,10 @@
                         <a href="">Reporting</a>
                         <ul class="submenu">
                             <li>
-                                <a href="">Balance</a>
+                                <a href="">Income</a>
                             </li>
                             <li>
-                                <a href="">By Category</a>
+                                <a href="">Expenses</a>
                             </li>
                         </ul>
                     </li>
@@ -76,7 +76,7 @@
 
                     <div class="row">
                         <div id="home-graph">
-                            <canvas id="home-chart"></canvas>
+                            <canvas id="home-chart" class="home-chart"></canvas>
                         </div>
                     </div>
 
@@ -114,7 +114,7 @@
         <div id="form">
             <div class="tab-panel">
                 <button id="income-tab" rel="income-form" class="">Income</button>
-                <button id="expense-tab" rel="expense-form" class="">Expense</button>
+                <button id="expense-tab" rel="expense-form" class="active">Expense</button>
             </div>
             <!-- tab content for Income and Expenses-->
             <div id="income-form" class="form">
@@ -133,6 +133,7 @@
                     <label>Note</label>
                     <textarea id="income-note" placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
                     <input id="income-btn-add" type="button" value="Add" />
+                    <input id="income-btn-cancel" type="button" value="Cancel" />                    
                 </form>
             </div>
 
@@ -155,6 +156,8 @@
                     <label>Note</label>
                     <textarea id="expense-note" placeholder="Add note.." onkeyup="adjust_textarea(this)"></textarea>
                     <input id="expense-btn-add" type="button" value="Add" />
+                    <input id="expense-btn-cancel" type="button" value="Cancel" />                    
+                    
                 </form>
             </div>
         </div>

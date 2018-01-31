@@ -59,7 +59,7 @@ var homeChartFunc = function () {
         },
         options: {
             title: {
-                display: true,
+                display: false,
                 text: 'My Budget',
                 fontSize: 10,
                 fontColor: 'white',
