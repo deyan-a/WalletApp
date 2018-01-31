@@ -18,7 +18,7 @@
 // });
 
 var homeChartFunc = function () {
-    var parent = document.getElementById('chart-parent');
+    var parent = document.getElementById('home-graph');
     parent.removeChild(document.getElementById('home-chart'));
     var newChild = document.createElement('canvas');
     newChild.setAttribute('id', 'home-chart');
