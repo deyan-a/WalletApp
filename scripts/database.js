@@ -115,7 +115,7 @@ let expensesModule = (function () {
     }
 })();
 
-let calculateBalance = (val1, val2) => {
+var calculateBalance = function (val1, val2) {
     return val1.getTotal() - val2.getTotal();
 };
 

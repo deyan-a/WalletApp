@@ -109,16 +109,16 @@ body {
 
 #balanceLabel {
     font-size: 1.25em;
-    color:rgb(218, 252, 252);
+    color:#9a9aac;
   
 }
 #expensesLabel {
     font-size: 1.25em;
-    color:rgb(252, 226, 218);
+    color:#ed1946;
 }
 #incomeLabel {
     font-size: 1.25em;
-    color:rgb(176, 252, 182);
+    color:#10EDC5;
 }
 
 .list-last-five-events {
@@ -144,9 +144,9 @@ ul > li:nth-of-type(odd) {
     margin-top: 0.5em;
 }
 #btn-img {
-    width: 3em;
-    height: 3em;
-    border-radius: 2em;
+    width: 5em;
+    height: 5em;
+    border-radius: 3em;
     border-style: none;
     align-content: center;
     position: relative;
@@ -164,11 +164,12 @@ ul > li:nth-of-type(odd) {
 }
 
 .income-color {
-    color: green;
+    color: #10EDC5;
 }
 
+
 .expense-color {
-    color: red;
+    color: #ed1946;
 }
 
 .button-container {
@@ -187,6 +188,8 @@ ul > li:nth-of-type(odd) {
 .clicked:hover {
     background: #ed1946;
 }
+
+
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
@@ -321,7 +324,7 @@ ul > li:nth-of-type(odd) {
 }
 
 .footer-container {
-  position: fixed;
+  /* position: fixed; */
   color: #fffff0;
   font-size: 1.25em;
   left: 0;
