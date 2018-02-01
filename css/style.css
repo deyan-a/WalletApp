@@ -23,9 +23,15 @@ body {
     display: none;
 }
 #income-chart-div {
-    width: 15em;
-    height:15em;
+    width: 20em;
+    height: 20em;
 }
+
+#expenses-chart-div {
+    width: 20em;
+    height: 20em;
+}
+
 .mainmenu,
 .submenu {
     list-style: none;
