@@ -20,24 +20,24 @@
             <div class="navigation col-xs-2">
                 <ul class="mainmenu">
                     <li>
-                        <a href="">Home</a>
+                        <a id="home-link"  href="#">Home</a>
                     </li>
                     <li>
-                        <a href="">Reporting</a>
+                        <a id="report-link" href="#">Reporting</a>
                         <ul class="submenu">
                             <li>
-                                <a href="">Income</a>
+                                <a id="income-link"href="#">Income</a>
                             </li>
                             <li>
-                                <a href="">Expenses</a>
+                                <a id="expenses-link" href="#">Expenses</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="">Budget Planner</a>
+                        <a id="budget-link" href="#">Budget Planner</a>
                     </li>
                     <li>
-                        <a href="">Contact us</a>
+                        <a id="contacts-link"href="#">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             <div class="col-xs-6 col-xs-offset-3">
-                <div class="home-layout">
+                <div class="home-layout current-page home-page">
                     <div class="row">
                         <div class="home-labels">
                             <div class="label-pairs col-xs-4">
@@ -94,6 +94,16 @@
 
 
                 </div>
+                
+                <div class="a inactive-page income-page">
+                    <div id="income-chart-div">
+                        <canvas id="income-chart"></canvas>
+                    </div>
+                </div>
+                <div class="a inactive-page expenses-page">Just to suffer?</div>
+                <div class="a inactive-page budget-page">Every night</div>
+                <div class="a inactive-page contacts-page">I feel despair</div>
+
             </div>
             </div>
         </div>
@@ -168,9 +178,11 @@
         crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/page-switcher.js"></script>
     <script src="./scripts/database.js"></script>
    <!-- <script src="./scripts/visualization.js"></script> -->
-   <script src="./scripts/charts.js"></script>   
+   <script src="./scripts/charts.js"></script>
+   <script src="./scripts/income-chart.js"></script>
     <script src="./scripts/event-logic.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>

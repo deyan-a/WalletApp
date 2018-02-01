@@ -12,7 +12,20 @@ body {
     background-color: #292778;
     overflow: hidden;
 }
-
+.current-page{
+    display: block;
+}
+.a {
+    font-size: 5em;
+    color: white;
+}
+.inactive-page{
+    display: none;
+}
+#income-chart-div {
+    width: 15em;
+    height:15em;
+}
 .mainmenu,
 .submenu {
     list-style: none;
