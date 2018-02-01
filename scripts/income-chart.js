@@ -9,7 +9,8 @@ var incomeChartFunc = function () {
 
     var expChart = document.getElementById('income-chart').getContext('2d');
     
-    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontFamily = 'Helvetica, Arial, sans-serif';
+    Chart.defaults.global.defaultFontSize = 15;
     Chart.defaults.global.defaultFontColor = 'white';
 
     var massPopChart = new Chart(expChart, {
@@ -35,14 +36,14 @@ var incomeChartFunc = function () {
         },
         options: {
             title: {
-                display: false,
-                text: 'Income Chart',
-                fontSize: 30,
+                display: true,
+                text: 'Income by category',
+                fontSize: 35,
                 fontColor: 'white',
             },
             legend: {
                 display: true,
-                position: 'right',
+                position: 'bottom',
                 labels: {
                     fontColor: 'white'
                 }
