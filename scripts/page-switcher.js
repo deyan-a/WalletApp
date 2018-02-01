@@ -17,7 +17,7 @@
         var $contactsPage = $(".contacts-page");
         $home.on("click", function() {
             // $homePage.addClass("current-page");
-            $homePage.slideDown(300);
+            $homePage.show(300);
             $incomePage.hide(300);
             $expensesPage.hide(300);
             $budgetPage.hide(300);
@@ -25,14 +25,14 @@
         });
         $report.on("click", function() {
             $homePage.hide(300);
-            $incomePage.slideDown(300);
+            $incomePage.show(300);
             $expensesPage.hide(300);
             $budgetPage.hide(300);
             $contactsPage.hide(300);
         });
         $income.on("click", function() {
             $homePage.hide(300);
-            $incomePage.slideDown(300);
+            $incomePage.show(300);
             $expensesPage.hide(300);
             $budgetPage.hide(300);
             $contactsPage.hide(300);
@@ -40,7 +40,7 @@
         $expenses.on("click", function() {
             $homePage.hide(300);
             $incomePage.hide(300);
-            $expensesPage.slideDown(300);
+            $expensesPage.show(300);
             $budgetPage.hide(300);
             $contactsPage.hide(300);
         });
@@ -48,7 +48,7 @@
             $homePage.hide(300);
             $incomePage.hide(300);
             $expensesPage.hide(300);
-            $budgetPage.slideDown(300);
+            $budgetPage.show(300);
             $contactsPage.hide(300);
         });
         $contacts.on("click", function() {
@@ -56,7 +56,7 @@
             $incomePage.hide(300);
             $expensesPage.hide(300);
             $budgetPage.hide(300);
-            $contactsPage.slideDown(300);
+            $contactsPage.show(300);
         });
         
 
