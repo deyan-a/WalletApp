@@ -30,8 +30,6 @@ var incomeChartFunc = function () {
                     'orange',
                     'red',
                 ],
-                hoverBorderWidth: 5,
-                hoverBorderColor: 'white'
             }]
         },
         options: {
