@@ -15,21 +15,17 @@ body {
 .current-page{
     display: block;
 }
-.a {
-    font-size: 5em;
-    color: white;
-}
+
 .inactive-page{
     display: none;
 }
-#income-chart-div {
-    width: 20em;
-    height: 14em;
-}
 
-#expenses-chart-div {
+#expenses-chart-div,
+#income-chart-div {
+    font-size: 5em;
     width: 20em;
-    height: 14em;
+    height: 11em;
+    color: white;
 }
 
 .mainmenu,
@@ -121,13 +117,20 @@ body {
 }
 
 .home-labels,
-.last-5-label {
+.last-5-label,
+#expenses-events-list,
+#income-events-list {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     color: rgb(175, 186, 189);
     font-size: 1.25em;
     font-weight: 250;
 }
+
+/* #expenses-events-list,
+#income-events-list {
+    font-size: 2em;
+} */
 
 .label-pairs {
     color: rgb(255, 255, 255);
@@ -154,6 +157,14 @@ body {
     list-style-type: none;
     font-size: 1.25em;
     max-height: 7em;
+    overflow: hidden;
+}
+
+.income-list,
+.expenses-list {
+    list-style-type: none;
+    font-size: 1.25em;
+    max-height: 9em;
     overflow: hidden;
 }
 
