@@ -1,6 +1,13 @@
 /* eslint-disable */
 
 $(function () {
+    var clearData = function (formName) {
+        var $form = formName;
+        $($form).children('input[type="text"]').val('');
+        $($form).children('input[type="number"]').val('');
+        $($form).children('textarea').val('');             
+    }
+
     var updateTotals = function () {
         var $incomeLabel = $("#incomeLabel");
         var incomeTotal = incomeModule.getTotal().toFixed(2);
@@ -59,6 +66,7 @@ $(function () {
         $newList.prependTo(parent);
     }
 
+
     var $incomeTab = $("#income-tab");
     var $expenseTab = $("#expense-tab");
     var $eventsList = $("#events-list");
@@ -79,6 +87,7 @@ $(function () {
             $incomeAmount, $incomeSelect, $incomeNote, $incomeDate);
         updateList($eventsList, $incomeDate, $incomeSelect, $incomeAmount, $incomeNote, type);
         updateTotals();
+        clearData('#incomeForm');
         homeChartFunc();
         incomeChartFunc();
         expensesFuncChart();
@@ -99,8 +108,26 @@ $(function () {
             $expenseAmount, $expenseSelect, $expenseNote, $expenseDate);
         updateList($eventsList, $expenseDate, $expenseSelect, $expenseAmount, $expenseNote, type);
         updateTotals();
+        clearData('#expenseForm');      
         homeChartFunc();
         expensesFuncChart();
         updateExpensesList($expensesEventsList, $expenseDate, $expenseSelect, $expenseAmount, $expenseNote);
     });
+
+    var $viewButton = $("#view-all-btn");
+    var $closeButton = $("#close-all-btn");
+    var $listToShow = $('#expense-list');
+
+    $viewButton.on("click", function() {
+        $listToShow.removeClass("events-list");
+        $listToShow.addClass("expand-list");
+        $closeButton.removeClass("hide-button");
+        $viewButton.addClass("hide-button");
+    });
+    $closeButton.on("click", function() {
+        $listToShow.removeClass("expand-list");
+        $listToShow.addClass("events-list");
+        $closeButton.addClass("hide-button");
+        $viewButton.removeClass("hide-button");
+    })
 });

@@ -118,7 +118,7 @@ body {
 
 .home-labels,
 .last-5-label,
-#expenses-events-list,
+#expense-list,
 #income-events-list {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -160,12 +160,71 @@ body {
     overflow: hidden;
 }
 
-.income-list,
-.expenses-list {
+.events-list {
     list-style-type: none;
     font-size: 1.25em;
     max-height: 9em;
     overflow: hidden;
+}
+
+.expand-list {
+    list-style-type: none;
+    font-size: 1.25em;
+    max-height: 12em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#expense-list::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px #10EDC5; */
+	background-color: #1f1e70;
+}
+
+#expense-list::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #1f1e70;
+}
+
+#expense-list::-webkit-scrollbar-thumb
+{
+	background-color: #10EDC5;
+	border: 2px solid #1f1e70;
+}
+
+#income-list::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px #10EDC5; */
+	background-color: #1f1e70;
+}
+
+#income-list::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #1f1e70;
+}
+
+#income-list::-webkit-scrollbar-thumb
+{
+	background-color: #10EDC5;
+	border: 2px solid #1f1e70;
+}
+
+
+.view-all-link {
+    text-align: right;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+}
+.view-all-link:hover {
+    color: #10EDC5;
+font-weight: bold;
+}
+
+.hide-button {
+    display: none;
 }
 
 
