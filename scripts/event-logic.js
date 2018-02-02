@@ -54,6 +54,7 @@ $(function () {
         updateTotals();
         homeChartFunc();
         incomeChartFunc();
+        expensesFuncChart();
     });
 
     var spendBtn = $("#expense-btn-add");
@@ -71,5 +72,6 @@ $(function () {
         updateList($eventsList, $expenseDate, $expenseSelect, $expenseAmount, $expenseNote, type);
         updateTotals();
         homeChartFunc();
+        expensesFuncChart();
     });
 });
