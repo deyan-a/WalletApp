@@ -53,6 +53,7 @@ $(function () {
         updateList($eventsList, $incomeDate, $incomeSelect, $incomeAmount, $incomeNote, type);
         updateTotals();
         homeChartFunc();
+        incomeChartFunc();
     });
 
     var spendBtn = $("#expense-btn-add");

@@ -1,4 +1,4 @@
-(function() {
+// $(function() {
 
 var incomeChartFunc = function () {
     var parent = document.getElementById('income-chart-div');
@@ -21,7 +21,10 @@ var incomeChartFunc = function () {
                 label: '',
                 data: [
                     // salary, sale, rent, other
-                    4, 3, 2, 1
+                    incomeModule.getCategory('salary'),
+                    incomeModule.getCategory('sale'),
+                    incomeModule.getCategory('rent'),
+                    incomeModule.getCategory('other'),
                 ],
                 backgroundColor:'green',
                 backgroundColor: [
@@ -52,5 +55,4 @@ var incomeChartFunc = function () {
         }
     });
 }
-incomeChartFunc();
-})();
+// })();
