@@ -1,5 +1,3 @@
-// $(function() {
-
 var incomeChartFunc = function () {
     var parent = document.getElementById('income-chart-div');
     parent.removeChild(document.getElementById('income-chart'));
@@ -55,4 +53,3 @@ var incomeChartFunc = function () {
         }
     });
 }
-// })();

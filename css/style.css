@@ -8,7 +8,7 @@ body {
 
 .navigation {
     font-size: 2em;
-    height: 36em;
+    height: 38em;
     background-color: #292778;
     overflow: hidden;
 }
@@ -66,7 +66,6 @@ body {
 .header {
     color: #fffff0;
     font-size: 1.25em;
-    /* background-color: #292778; */
 }
 
 .header a {
@@ -127,11 +126,6 @@ body {
     font-weight: 250;
 }
 
-/* #expenses-events-list,
-#income-events-list {
-    font-size: 2em;
-} */
-
 .label-pairs {
     color: rgb(255, 255, 255);
     font-size: 1.4em;
@@ -176,7 +170,6 @@ body {
 }
 #expense-list::-webkit-scrollbar-track
 {
-	/* -webkit-box-shadow: inset 0 0 6px #10EDC5; */
 	background-color: #1f1e70;
 }
 
@@ -194,7 +187,6 @@ body {
 
 #income-list::-webkit-scrollbar-track
 {
-	/* -webkit-box-shadow: inset 0 0 6px #10EDC5; */
 	background-color: #1f1e70;
 }
 
@@ -211,19 +203,22 @@ body {
 }
 
 
-.view-all-link {
+.view-all-link,
+.view-all-income-link {
     text-align: right;
     background: none;
     border: none;
     color: white;
     font-size: 1.1em;
 }
-.view-all-link:hover {
+.view-all-link:hover,
+.view-all-income-link:hover {
     color: #10EDC5;
 font-weight: bold;
 }
 
-.hide-button {
+.hide-button,
+.hide-income-button {
     display: none;
 }
 
@@ -238,7 +233,6 @@ ul>li:nth-of-type(odd) {
 }
 
 #home-graph {
-    /* border: 1px solid black; */
     width: 100%;
     height: 35em;
     margin-top: 0.5em;
@@ -261,7 +255,6 @@ ul>li:nth-of-type(odd) {
 
 .list-last-five-events {
     width: 100%;
-    /* text-align: center; */
     margin-top: 0.5em;
 }
 
@@ -300,11 +293,9 @@ ul>li:nth-of-type(odd) {
 @keyframes spin {
     0% {
         transform: rotate(0deg);
-        /* background-color: #10edc5; */
     }
     100% {
         transform: rotate(135deg);
-        /* background-color: #a5d8fa; */
     }
 }
 
@@ -412,7 +403,6 @@ ul>li:nth-of-type(odd) {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 49.7%;
-    /* border-radius: 20px; */
 }
 
 .tab-panel button:hover {
@@ -434,7 +424,6 @@ ul>li:nth-of-type(odd) {
 }
 
 .footer-container {
-    /* position: fixed; */
     color: #fffff0;
     font-size: 1.25em;
     left: 0;

@@ -33,7 +33,6 @@ $(function () {
     $cancelExpenseBtn.on('click', displayForm);
 
 
-// $(function() {
     $('.tab-panel button').on('click', function () {
         var panel = $(this).closest('.tab-panel');
 

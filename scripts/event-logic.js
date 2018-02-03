@@ -1,72 +1,5 @@
 /* eslint-disable */
 
-$(function () {
-    var clearData = function (formName) {
-        var $form = formName;
-        $($form).children('input[type="text"]').val('');
-        $($form).children('input[type="number"]').val('');
-        $($form).children('textarea').val('');             
-    }
-
-    var updateTotals = function () {
-        var $incomeLabel = $("#incomeLabel");
-        var incomeTotal = incomeModule.getTotal().toFixed(2);
-        $incomeLabel.text(incomeTotal || 0);
-
-        var $expenseLabel = $("#expensesLabel");
-        var expenseTotal = expensesModule.getTotal().toFixed(2);
-        $expenseLabel.text(expenseTotal || 0);
-
-        var $balanceLabel = $("#balanceLabel");
-        var balanceTotal = calculateBalance(incomeModule, expensesModule).toFixed(2);
-        $balanceLabel.text(balanceTotal);
-    }
-
-    var updateList = function (parent, date, category, amount, note, type) {
-
-        var $newDate = $("<div>").text(date).addClass("col-xs-3");
-        var $newCategory = $("<div>").text(category).addClass("col-xs-3");
-        var $newAmount = $("<div>").text(amount).addClass("col-xs-3");
-
-        if (type === "income") {
-            $newAmount.addClass("income-color");
-        } else {
-            $newAmount.addClass("expense-color");
-        }
-
-        var $newNote = $("<div>").text(note).addClass("col-xs-3");
-        var $newList = $("<li>");
-        $newList.addClass("row");
-        $newList.append($newDate, $newCategory, $newAmount, $newNote);
-        $newList.prependTo(parent);
-    }
-
-    var updateExpensesList = function (parent, date, category, amount, note) {
-
-        var $newDate = $("<div>").text(date).addClass("col-xs-3");
-        var $newCategory = $("<div>").text(category).addClass("col-xs-3");
-        var $newAmount = $("<div>").text(amount).addClass("col-xs-3");
-
-        var $newNote = $("<div>").text(note).addClass("col-xs-3");
-        var $newList = $("<li>");
-        $newList.addClass("row");
-        $newList.append($newDate, $newCategory, $newAmount, $newNote);
-        $newList.prependTo(parent);
-    }
-
-    var updateIncomeList = function (parent, date, category, amount, note) {
-        var $newDate = $("<div>").text(date).addClass("col-xs-3");
-        var $newCategory = $("<div>").text(category).addClass("col-xs-3");
-        var $newAmount = $("<div>").text(amount).addClass("col-xs-3");
-
-        var $newNote = $("<div>").text(note).addClass("col-xs-3");
-        var $newList = $("<li>");
-        $newList.addClass("row");
-        $newList.append($newDate, $newCategory, $newAmount, $newNote);
-        $newList.prependTo(parent);
-    }
-
-
     var $incomeTab = $("#income-tab");
     var $expenseTab = $("#expense-tab");
     var $eventsList = $("#events-list");
@@ -114,20 +47,4 @@ $(function () {
         updateExpensesList($expensesEventsList, $expenseDate, $expenseSelect, $expenseAmount, $expenseNote);
     });
 
-    var $viewButton = $("#view-all-btn");
-    var $closeButton = $("#close-all-btn");
-    var $listToShow = $('#expense-list');
 
-    $viewButton.on("click", function() {
-        $listToShow.removeClass("events-list");
-        $listToShow.addClass("expand-list");
-        $closeButton.removeClass("hide-button");
-        $viewButton.addClass("hide-button");
-    });
-    $closeButton.on("click", function() {
-        $listToShow.removeClass("expand-list");
-        $listToShow.addClass("events-list");
-        $closeButton.addClass("hide-button");
-        $viewButton.removeClass("hide-button");
-    })
-});

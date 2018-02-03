@@ -1,22 +1,3 @@
-// $(function() {
-// var homeChart = $("#home-chart").getContext("2d");
-
-// var budgetChart = new Chart(homeChart, {
-//     type: 'doughnut',
-//     data: {
-//     labels: ['Income', 'Expense', 'Balance'],
-//     datasets: [{
-//         label: "budget",
-//         data: [
-//             1300,
-//             300,
-//             1000
-//         ]
-//     }]
-//     }
-// });
-// });
-
 var homeChartFunc = function () {
     var parent = document.getElementById('home-graph');
     parent.removeChild(document.getElementById('home-chart'));
@@ -45,14 +26,11 @@ var homeChartFunc = function () {
                     expenses,
                     balance
                 ],
-                //backgroundColor:'green',
                 backgroundColor: [
                     '#10EDC5',
                     '#ed1946',
                     '#9A9AAC',
                 ],
-                // borderWidth: 1,
-                // borderColor: '#777',
                 hoverBorderWidth: 1,
                 hoverBorderColor: '#000'
             }]
@@ -88,14 +66,6 @@ var homeChartFunc = function () {
                 }
             }]
     },
-            // layout: {
-            //     padding: {
-            //         left: 50,
-            //         right: 0,
-            //         bottom: 0,
-            //         top: 0
-            //     }
-            // },
             tooltips: {
                 enabled: false
             }
