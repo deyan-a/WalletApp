@@ -20,7 +20,8 @@ var expensesFuncChart = function () {
 
   Chart.defaults.global.defaultFontFamily = 'Helvetica, Arial, sans-serif';
   Chart.defaults.global.defaultFontSize = 15;
-  Chart.defaults.global.defaultFontColor = 'white';
+  Chart.defaults.global.defaultFontColor = 'rgba(0, 0, 0, 0.8)';
+
 
   let massPopChart = new Chart(expensesChart, {
     type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -37,13 +38,13 @@ var expensesFuncChart = function () {
           other,
         ],
         backgroundColor: [
-          '#10edc5',
-          '#ed1946',
-          '#00ff00',
-          '#9932cc',
-          '#9a9aac',
-          '#ff6347',
-          '#ffd700',
+          '#511167',
+          '#242858',
+          '#88C448',
+          '#3299BB',
+          '#FF9900',
+          '#459A63',
+          '#C7390B',
         ],
       }]
     },
@@ -57,6 +58,9 @@ var expensesFuncChart = function () {
       legend: {
         display: true,
         position: 'bottom',
+        labels: {
+          fontColor: 'rgba(0, 0, 0, 0.8)'
+      }
       },
       tooltips: {
         enabled: true

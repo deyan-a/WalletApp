@@ -6,10 +6,11 @@ var incomeChartFunc = function () {
     parent.append(newChild);
 
     var expChart = document.getElementById('income-chart').getContext('2d');
-    
+
     Chart.defaults.global.defaultFontFamily = 'Helvetica, Arial, sans-serif';
     Chart.defaults.global.defaultFontSize = 15;
-    Chart.defaults.global.defaultFontColor = 'white';
+    Chart.defaults.global.defaultFontColor = 'rgba(0, 0, 0, 0.8)';
+
 
     var massPopChart = new Chart(expChart, {
         type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -24,12 +25,11 @@ var incomeChartFunc = function () {
                     incomeModule.getCategory('rent'),
                     incomeModule.getCategory('other'),
                 ],
-                backgroundColor:'green',
                 backgroundColor: [
-                    'pink',
-                    'skyblue',
-                    'orange',
-                    'red',
+                    '#242858',
+                    '#88C448',
+                    '#3299BB',
+                    '#C7390B',
                 ],
             }]
         },
@@ -38,13 +38,13 @@ var incomeChartFunc = function () {
                 display: true,
                 text: 'Income by category',
                 fontSize: 35,
-                fontColor: 'white',
+                fontColor: 'rgba(0, 0, 0, 0.8)',
             },
             legend: {
                 display: true,
                 position: 'bottom',
                 labels: {
-                    fontColor: 'white'
+                    fontColor: 'rgba(0, 0, 0, 0.8)'
                 }
             },
             tooltips: {

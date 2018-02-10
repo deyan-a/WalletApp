@@ -12,8 +12,8 @@ var homeChartFunc = function () {
     var balance = calculateBalance(incomeModule, expensesModule);
     // Global Options
     Chart.defaults.global.defaultFontFamily = 'Lato';
-    // Chart.defaults.global.defaultFontSize = 2em;
-    Chart.defaults.global.defaultFontColor = 'white';
+    Chart.defaults.global.defaultFontSize = 15;
+    Chart.defaults.global.defaultFontColor = 'rgba(0, 0, 0, 0.8)';
 
     var massPopChart = new Chart(homeChart, {
         type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -27,9 +27,9 @@ var homeChartFunc = function () {
                     balance
                 ],
                 backgroundColor: [
-                    '#10EDC5',
-                    '#ed1946',
-                    '#9A9AAC',
+                    '#88C448',
+                    '#C7390B',
+                    '#3299BB',
                 ],
                 hoverBorderWidth: 1,
                 hoverBorderColor: '#000'
@@ -40,19 +40,22 @@ var homeChartFunc = function () {
                 display: false,
                 text: 'My Budget',
                 fontSize: 10,
-                fontColor: 'white',
+                fontColor: 'rgba(0, 0, 0, 0.8)',
             },
             legend: {
                 display: false,
                 position: 'right',
                 labels: {
-                    fontColor: 'white'
+                    fontColor: 'rgba(0, 0, 0, 0.8)',
                 }
             },
             scales: {
     xAxes: [{
                 gridLines: {
                     display: false
+                },
+                ticks: {
+                    fontColor: 'rgba(0, 0, 0, 0.4)',                    
                 }
             }],
     yAxes: [{
@@ -60,6 +63,8 @@ var homeChartFunc = function () {
                     display: true
                 },
                 ticks: {
+                    fontColor: 'rgba(0, 0, 0, 0.4)',
+                    
                     suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
                     // OR //
                     beginAtZero: true   // minimum value will be 0.

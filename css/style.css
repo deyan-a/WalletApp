@@ -3,7 +3,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
-    background-color: #292787;
+    background-color: #ebf0f5;
 }
 
 .navigation {
@@ -12,11 +12,12 @@ body {
     background-color: #292778;
     overflow: hidden;
 }
-.current-page{
+
+.current-page {
     display: block;
 }
 
-.inactive-page{
+.inactive-page {
     display: none;
 }
 
@@ -44,8 +45,8 @@ body {
 }
 
 .mainmenu a:hover {
-    color: #10EDC5;
-    font-weight: bold;
+    color: #39b54a;
+    font-weight: bolder;
 }
 
 .mainmenu li:hover .submenu {
@@ -54,7 +55,7 @@ body {
 }
 
 .submenu a:hover {
-    color: #10EDC5;
+    color: #39b54a;
 }
 
 .submenu {
@@ -75,7 +76,7 @@ body {
 }
 
 .header a:hover {
-    color: #10EDC5;
+    color: #39b54a;
 }
 
 .profile-icon {
@@ -127,9 +128,10 @@ body {
 }
 
 .label-pairs {
-    color: rgb(255, 255, 255);
-    font-size: 1.4em;
-    font-weight: bold;
+    color: #231f20;
+    font-size: 2em;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 #balanceLabel {
@@ -144,7 +146,7 @@ body {
 
 #incomeLabel {
     font-size: 1.25em;
-    color: #10EDC5;
+    color: #39b54a;
 }
 
 .list-last-five-events {
@@ -168,53 +170,48 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
 }
-#expense-list::-webkit-scrollbar-track
-{
-	background-color: #1f1e70;
+
+#expense-list::-webkit-scrollbar-track {
+    background-color: #1f1e70;
 }
 
-#expense-list::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #1f1e70;
+#expense-list::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1f1e70;
 }
 
-#expense-list::-webkit-scrollbar-thumb
-{
-	background-color: #10EDC5;
-	border: 2px solid #1f1e70;
+#expense-list::-webkit-scrollbar-thumb {
+    background-color: #39b54a;
+    border: 2px solid #1f1e70;
 }
 
-#income-list::-webkit-scrollbar-track
-{
-	background-color: #1f1e70;
+#income-list::-webkit-scrollbar-track {
+    background-color: #1f1e70;
 }
 
-#income-list::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #1f1e70;
+#income-list::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1f1e70;
 }
 
-#income-list::-webkit-scrollbar-thumb
-{
-	background-color: #10EDC5;
-	border: 2px solid #1f1e70;
+#income-list::-webkit-scrollbar-thumb {
+    background-color: #39b54a;
+    border: 2px solid #1f1e70;
 }
-
 
 .view-all-link,
 .view-all-income-link {
     text-align: right;
     background: none;
     border: none;
-    color: white;
+    color: #231f20;
     font-size: 1.1em;
 }
+
 .view-all-link:hover,
 .view-all-income-link:hover {
-    color: #10EDC5;
-font-weight: bold;
+    color: #39b54a;
+    font-weight: bold;
 }
 
 .hide-button,
@@ -222,14 +219,14 @@ font-weight: bold;
     display: none;
 }
 
-
 ul {
     list-style: none;
     padding: 0;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 ul>li:nth-of-type(odd) {
-    background-color: #393785;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #home-graph {
@@ -264,7 +261,7 @@ ul>li:nth-of-type(odd) {
 }
 
 .income-color {
-    color: #10EDC5;
+    color: #39b54a;
 }
 
 .expense-color {
@@ -277,11 +274,11 @@ ul>li:nth-of-type(odd) {
 }
 
 .passive {
-    background: #10edc5;
+    background: #39b54a;
 }
 
 .clicked {
-    background: #10edc5;
+    background: #39b54a;
     transform: rotate(135deg);
     animation: spin 0.2s normal;
 }
@@ -315,7 +312,7 @@ ul>li:nth-of-type(odd) {
     text-transform: uppercase;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
-    color: rgb(24, 226, 189);
+    color: #39b54a;
     font-size: 1.25em;
     font-weight: 250;
     padding: 20px;
@@ -354,16 +351,12 @@ ul>li:nth-of-type(odd) {
     overflow: hidden;
 }
 
-.form input[type="button"],
-.form input[type="submit"] {
-    -moz-box-shadow: inset 0px 1px 0px 0px #10EDC5;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #10EDC5;
-    box-shadow: inset 0px 1px 0px 0px #10EDC5;
-    background-color: #10EDC5;
-    border: 1px solid #10EDC5;
+.form input[type="button"] {
+    background-color: #39b54a;
+    border: 1px solid #39b54a;
     display: inline-block;
     cursor: pointer;
-    color: #292787;
+    color: #fff;
     font-weight: bold;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.25em;
@@ -373,25 +366,44 @@ ul>li:nth-of-type(odd) {
     border-radius: 15px;
 }
 
-.form input[type="button"]:hover,
-.form input[type="submit"]:hover {
-    background: linear-gradient(to bottom, #1f1e79 5%, #1f1e79 100%);
-    background-color: #1f1e70;
-    border: 1px solid #1F1e70;
-    box-shadow: inset 0px 1px 0px 0px #1F1e99;
-    color: #10EDC5;
+.form input[type="button"]:hover {
+    background-color: #fff;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+}
+
+.form input[value="Cancel"] {
+    background-color: #fff;
+    border: 1px solid #39b54a;
+    display: inline-block;
+    cursor: pointer;
+    color: #39b54a;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.25em;
+    padding: 6px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.form input[value="Cancel"]:hover {
+    background-color: #fff;
+    color: #ec1c24;
+    border: 1px solid #ec1c24;
 }
 
 .tab-panel {
     width: 35%;
     margin: auto;
     margin-top: 5em;
-    background: #1f1e70;
+    background: #ebf0f5;
 }
 
 .tab-panel button {
-    background-color: #1f1e70;
-    color: rgb(24, 226, 189);
+    background-color: #ebf0f5;
+    color: rgb(0, 0, 0 0.8);
     text-transform: uppercase;
     text-align: center;
     font-size: 1.25em;
@@ -406,13 +418,13 @@ ul>li:nth-of-type(odd) {
 }
 
 .tab-panel button:hover {
-    background-color: rgb(24, 226, 189);
-    color: #292787;
+    background-color: #34c642;
+    color: #fff;
 }
 
 .tab-panel .active {
-    background-color: rgb(24, 226, 189);
-    color: #292787;
+    background-color: #34c642;
+    color: #fff;
 }
 
 .tabcontent {
@@ -424,11 +436,10 @@ ul>li:nth-of-type(odd) {
 }
 
 .footer-container {
-    color: #fffff0;
+    color: rgb(0, 0, 0, 0.8);
     font-size: 1.25em;
     left: 0;
     bottom: 0;
-    background-color: #292778;
 }
 
 .footer {
@@ -442,5 +453,5 @@ ul>li:nth-of-type(odd) {
 }
 
 .footer a:hover {
-    color: #10EDC5;
+    color: #34c642;
 }
