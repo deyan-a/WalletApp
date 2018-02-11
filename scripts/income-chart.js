@@ -19,7 +19,6 @@ var incomeChartFunc = function () {
             datasets: [{
                 label: '',
                 data: [
-                    // salary, sale, rent, other
                     incomeModule.getCategory('salary'),
                     incomeModule.getCategory('sale'),
                     incomeModule.getCategory('rent'),

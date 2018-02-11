@@ -12,7 +12,11 @@ body {
     background-color: #292778;
     overflow: hidden;
 }
-
+.nav-ext {
+    background-color: #292778;
+    height: 3.8em;
+    
+}
 .current-page {
     display: block;
 }
@@ -119,7 +123,7 @@ body {
 .home-labels,
 .last-5-label,
 #expense-list,
-#income-events-list {
+#income-list {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     color: rgb(175, 186, 189);
@@ -129,23 +133,23 @@ body {
 
 .label-pairs {
     color: #231f20;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 200;
     text-transform: uppercase;
 }
 
 #balanceLabel {
-    font-size: 1.25em;
+    font-size: 1.4em;
     color: #9a9aac;
 }
 
 #expensesLabel {
-    font-size: 1.25em;
+    font-size: 1.4em;
     color: #ed1946;
 }
 
 #incomeLabel {
-    font-size: 1.25em;
+    font-size: 1.4em;
     color: #39b54a;
 }
 
@@ -172,31 +176,31 @@ body {
 }
 
 #expense-list::-webkit-scrollbar-track {
-    background-color: #1f1e70;
+    background-color: #ebf0f5;
 }
 
 #expense-list::-webkit-scrollbar {
     width: 10px;
-    background-color: #1f1e70;
+    background-color: #ebf0f5;
 }
 
 #expense-list::-webkit-scrollbar-thumb {
     background-color: #39b54a;
-    border: 2px solid #1f1e70;
+    border: 2px solid #ebf0f5;
 }
 
 #income-list::-webkit-scrollbar-track {
-    background-color: #1f1e70;
+    background-color: #ebf0f5;
 }
 
 #income-list::-webkit-scrollbar {
     width: 10px;
-    background-color: #1f1e70;
+    background-color: #ebf0f5;
 }
 
 #income-list::-webkit-scrollbar-thumb {
     background-color: #39b54a;
-    border: 2px solid #1f1e70;
+    border: 2px solid #ebf0f5;
 }
 
 .view-all-link,
@@ -409,7 +413,7 @@ ul>li:nth-of-type(odd) {
     font-size: 1.25em;
     font-weight: bold;
     float: center;
-    border: #1f1e70;
+    /* border: #1f1e70; */
     outline: none;
     cursor: pointer;
     padding-top: 10px;
@@ -436,20 +440,22 @@ ul>li:nth-of-type(odd) {
 }
 
 .footer-container {
-    color: rgb(0, 0, 0, 0.8);
     font-size: 1.25em;
-    left: 0;
-    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: #292778;     */
+    /* left: 0;
+    bottom: 0; */
 }
 
 .footer {
-    margin: 0 2%;
+margin: 0 2%;
 }
 
 .footer a {
     float: right;
     margin: 1% 1% 0.5% 3%;
     text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .footer a:hover {

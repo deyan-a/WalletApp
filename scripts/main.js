@@ -1,4 +1,4 @@
-$(function () {
+(function () {
     var updateDate = function () {
         var now = new Date();
         var month = (now.getMonth() + 1);
@@ -49,4 +49,4 @@ $(function () {
 
         $('.form.active').slideUp(300, showNextForm);
     })
-});
+})();
