@@ -10,18 +10,12 @@
                 date: date
             });
         }
-        var printArr = function () {
-            list.forEach((entry) => {
-                console.log("type: " + entry.type +
-                    "\namount " + entry.amount +
-                    "\ncategory " + entry.category +
-                    "\npersonal note " + entry.note +
-                    "\ndate " + entry.date);
-            });
+        var returnList = function () {
+            return list;
         }
         return {
             addEvent,
-            printArr
+            returnList
         }
     })();
 

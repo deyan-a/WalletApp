@@ -1,5 +1,5 @@
-let expensesModule = (function () {
-    let expenses = {
+var expensesModule = (function () {
+    var expenses = {
         bills: 0,
         shopping: 0,
         vehicle: 0,
@@ -10,7 +10,7 @@ let expensesModule = (function () {
         total: 0,
     }
 
-    let addExpense = function (str, val) {
+    var addExpense = function (str, val) {
         switch (str) {
             case 'bills':
                 expenses.bills += (+val);
@@ -43,7 +43,7 @@ let expensesModule = (function () {
         }
     };
 
-    let getCategory = function (str) {
+    var getCategory = function (str) {
         switch (str) {
             case 'bills':
             return expenses.bills;
@@ -69,7 +69,7 @@ let expensesModule = (function () {
         }
     }
 
-    let getTotal = function () {
+    var getTotal = function () {
         return expenses.total;
     }
 

@@ -1,7 +1,5 @@
-/* eslint-disable */
-
-let incomeModule = (function () {
-    let categories = {
+var incomeModule = (function () {
+    var categories = {
         salary: 0,
         sale: 0,
         rent: 0,
@@ -9,7 +7,7 @@ let incomeModule = (function () {
         total: 0,
     };
 
-    let addIncome = function (str, val) {
+    var addIncome = function (str, val) {
 
         switch (str) {
             case 'salary':
@@ -31,12 +29,12 @@ let incomeModule = (function () {
         }
     }
 
-    let getTotal = function () {
+    var getTotal = function () {
         return categories.total;
     };
 
 
-    let getCategory = function (str) {
+    var getCategory = function (str) {
         switch (str) {
             case 'salary':
                 return categories.salary;

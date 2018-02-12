@@ -12,28 +12,14 @@
         $('#expense-date').val(today);
     }
 
-    var displayForm = function () {
+    var toggleForm = function () {
         $addBtn.toggleClass("clicked");
         $popUpDiv.fadeToggle(300);
         $popUpForm.fadeToggle(300);
         updateDate();
     };
 
-
-    var $addBtn = $("#btn-img");
-    var $cancelIncomeBtn = $('#income-btn-cancel');
-    var $cancelExpenseBtn = $('#expense-btn-cancel');
-    var $popUpDiv = $(".pop-up-div");
-    var $popUpForm = $(".pop-up-form");
-   
-
-
-    $addBtn.on("click", displayForm);
-    $cancelIncomeBtn.on("click", displayForm);
-    $cancelExpenseBtn.on('click', displayForm);
-
-
-    $('.tab-panel button').on('click', function () {
+    var switchForm = function () {
         var panel = $(this).closest('.tab-panel');
 
         var formToShow = $(this).attr('rel');
@@ -48,5 +34,17 @@
         $(this).addClass('active');
 
         $('.form.active').slideUp(300, showNextForm);
-    })
+    };
+
+    var $addBtn = $("#btn-img");
+    var $cancelIncomeBtn = $('#income-btn-cancel');
+    var $cancelExpenseBtn = $('#expense-btn-cancel');
+    var $popUpDiv = $(".pop-up-div");
+    var $popUpForm = $(".pop-up-form");
+    var $tabPanelButton = $('.tab-panel button');
+
+    $addBtn.on("click", toggleForm);
+    $cancelIncomeBtn.on("click", toggleForm);
+    $cancelExpenseBtn.on('click', toggleForm);
+    $tabPanelButton.on('click', switchForm)
 })();
